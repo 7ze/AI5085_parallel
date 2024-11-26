@@ -1,0 +1,97 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-pedantic",
+      "-std=c99",
+      "-g",
+      "-O2",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/array_utils.o",
+      "src/array_utils.c"
+    ],
+    "directory": "/home/zeus/work/uni/PP/assignments/assignment2",
+    "file": "/home/zeus/work/uni/PP/assignments/assignment2/src/array_utils.c",
+    "output": "/home/zeus/work/uni/PP/assignments/assignment2/obj/array_utils.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-pedantic",
+      "-std=c99",
+      "-g",
+      "-O2",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/bubble_sort.o",
+      "src/bubble_sort.c"
+    ],
+    "directory": "/home/zeus/work/uni/PP/assignments/assignment2",
+    "file": "/home/zeus/work/uni/PP/assignments/assignment2/src/bubble_sort.c",
+    "output": "/home/zeus/work/uni/PP/assignments/assignment2/obj/bubble_sort.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-pedantic",
+      "-std=c99",
+      "-g",
+      "-O2",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/main.o",
+      "src/main.c"
+    ],
+    "directory": "/home/zeus/work/uni/PP/assignments/assignment2",
+    "file": "/home/zeus/work/uni/PP/assignments/assignment2/src/main.c",
+    "output": "/home/zeus/work/uni/PP/assignments/assignment2/obj/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-pedantic",
+      "-std=c99",
+      "-g",
+      "-O2",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/quick_sort.o",
+      "src/quick_sort.c"
+    ],
+    "directory": "/home/zeus/work/uni/PP/assignments/assignment2",
+    "file": "/home/zeus/work/uni/PP/assignments/assignment2/src/quick_sort.c",
+    "output": "/home/zeus/work/uni/PP/assignments/assignment2/obj/quick_sort.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-pedantic",
+      "-std=c99",
+      "-g",
+      "-O2",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/selection_sort.o",
+      "src/selection_sort.c"
+    ],
+    "directory": "/home/zeus/work/uni/PP/assignments/assignment2",
+    "file": "/home/zeus/work/uni/PP/assignments/assignment2/src/selection_sort.c",
+    "output": "/home/zeus/work/uni/PP/assignments/assignment2/obj/selection_sort.o"
+  }
+]

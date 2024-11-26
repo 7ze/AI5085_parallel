@@ -1,24 +1,32 @@
 # Compiler and flags
 CC = gcc
-CFLAGS = -Wall -g -o2 -fopenmp
+CFLAGS = -Wall -Wextra -pedantic -std=c99 -g -O2 -I$(INC_DIR)
+LDFLAGS = -fopenmp
 
-# Source files and build directory
-SRCDIR = .
-BUILDDIR = build
-SRC = $(wildcard $(SRCDIR)/*.c)
-OBJ = $(patsubst $(SRCDIR)/%.c, $(BUILDDIR)/%, $(SRC))
+# Directories
+SRC_DIR = src
+OBJ_DIR = obj
+BIN_DIR = bin
+INC_DIR = include
 
-# Default target
-all: $(OBJ)
+# Files
+SRC_FILES = $(wildcard $(SRC_DIR)/*.c)  # Automatically find all .c files in src/
+OBJ_FILES = $(SRC_FILES:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
+EXEC = $(BIN_DIR)/sort
 
-# Compile each .c file to its own executable in the build directory
-$(BUILDDIR)/%: $(SRCDIR)/%.c | $(BUILDDIR)
-	$(CC) $(CFLAGS) $< -o $@
+# Targets
+all: $(EXEC)
 
-# Create the build directory if it doesn't exist
-$(BUILDDIR):
-	mkdir -p $(BUILDDIR)
+# Rule for creating the final executable
+$(EXEC): $(OBJ_FILES)
+	mkdir -p $(BIN_DIR)  # Ensure bin directory exists
+	$(CC) $(OBJ_FILES) -o $(EXEC) $(LDFLAGS)
 
-# Clean up build directory
+# Rule for creating object files
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	mkdir -p $(OBJ_DIR)  # Ensure obj directory exists
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Clean up object files and executable
 clean:
-	rm -rf $(BUILDDIR)
+	rm -rf $(OBJ_DIR) $(BIN_DIR)

@@ -1,1 +1,5 @@
 build/
+bin/
+obj/
+.cache/
+EduMPI_GUI*
