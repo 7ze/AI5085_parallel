@@ -1,6 +1,6 @@
 # Compiler and flags
 CC = gcc
-CFLAGS = -Wall -Wextra -pedantic -std=c99 -g -O2 -I$(INC_DIR)
+CFLAGS = -Wall -Wextra -pedantic -std=c99 -g -O2 -I$(INC_DIR) -fopenmp
 LDFLAGS = -fopenmp
 
 # Directories
