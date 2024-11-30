@@ -110,7 +110,7 @@ void sort(const Config *config, const char *algo) {
     double start_time = omp_get_wtime();
 
     srand(time(NULL));
-    int *list = (int *)malloc(config->array_size * sizeof(int));
+    int *list = (int *)malloc(config->array_size * sizeof(size_t));
 
     fill_array(list, config->array_size);
     printf("\nFilled the array with random values!\n");

@@ -4,13 +4,13 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-static void swap(int *a, int *b) {
+static void swap(size_t *a, size_t *b) {
     int temp = *a;
     *a = *b;
     *b = temp;
 }
 
-void bubble_sort(int *list, size_t size) {
+void bubble_sort(size_t *list, size_t size) {
     bool swapped;
     for (size_t i = 0; i < size - 1; i++) {
         swapped = false;
@@ -26,7 +26,7 @@ void bubble_sort(int *list, size_t size) {
     }
 }
 
-void parallelized_bubble_sort(int *list, size_t size, size_t n_threads) {
+void parallelized_bubble_sort(size_t *list, size_t size, size_t n_threads) {
     if (n_threads > 8) {
         n_threads = 8;
         printf("Using 8 threads!\n");
